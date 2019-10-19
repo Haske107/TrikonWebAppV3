@@ -103,7 +103,7 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   ];
 
   //ELEMENT HANDLES
-
+  @ViewChild('Contact_Row', {static: true}) Contact_Row;
 
     //CONTROL VARIABLES
   MouseOverActiveIndex = -1;
@@ -112,9 +112,13 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   Parallaxer2 = '-650px';
   DuneParallaxer = '-300px';
   parallaxRatio = .3;
+  SpaceshipParallaxRatio = 1.1;
   BannerVideoScaleValue = 1;
   BannerVideoTopValue = '0px';
   PlanetTopScale = 1;
+  ContactSectionTop = 0;
+  SpaceshipY = '0px';
+  SpaceshipX = '0px';
 
 
 
@@ -125,10 +129,11 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
       this.scaleBannerVideo(this.DistanceFromTop);
       this.scalePlanetTop(this.DistanceFromTop);
       this.parallaxDunes(this.DistanceFromTop);
+      this.getContactSectionScrollPosition(this.DistanceFromTop);
+      this.landSpaceShip(this.ContactSectionTop);
       this.Parallaxer = (-1000 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
       this.Parallaxer2 = (-600 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
-
-        cdr.detectChanges();
+      cdr.detectChanges();
     });
   }
 
@@ -138,16 +143,25 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
   }
 
+  getContactSectionScrollPosition(DistanceFromTop: number)  {
+      const height = window.innerHeight|| document.documentElement.clientHeight||
+          document.body.clientHeight;
 
+      if (this.DistanceFromTop > this.Contact_Row.nativeElement.offsetTop - height/2)  {
+      let ContactFormFromTop = this.Contact_Row.nativeElement.offsetTop;
+      this.ContactSectionTop = DistanceFromTop - ContactFormFromTop + height/2;
+      console.log(this.ContactSectionTop);
+    }
+  }
 
-
+  landSpaceShip(ContactSectionTop: number) {
+      this.SpaceshipY = (ContactSectionTop * this.SpaceshipParallaxRatio) + 'px';
+      this.SpaceshipX = (ContactSectionTop) + 'px';
+  }
 
   scaleBannerVideo(DistanceFromTop: number)  {
-    //0px - 200px to 10vh - 100vh
-    // 1vh = 20/9px
     let ZoomValue = 1 - (DistanceFromTop * (9/4000));
     if (ZoomValue > 1 ) ZoomValue = 1;
     if (ZoomValue < .4) ZoomValue = .4;

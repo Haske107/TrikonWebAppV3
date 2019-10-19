@@ -1,5 +1,4 @@
 <div class="homepage" id="scrollbar_style" cdkScrollable >
-
   <!-- <img src="https://drive.google.com/uc?export=view&id=1t2pg9FBEmsZ6sxe-gqttKAnCoLdrNuSz" alt="" class="Home_Button" appParallax> -->
   
   <div class="bannervideocountainer row" [ngStyle]="{'transform': 'scale(' + BannerVideoScaleValue+ ')' , 'top': BannerVideoTopValue}">
@@ -16,7 +15,6 @@
   </iframe>
   </div>
 
-
   <div class="Intro_Row row" >
     <div class="col Intro_Row_Column">
       <!--<img src="https://drive.google.com/uc?export=view&id=1-x1CpXM4a48v19Nr-2lg1mzAYMB5KuvQ" alt="" class="Section1_Background">-->
@@ -26,7 +24,6 @@
       <!--<img [ngStyle]="{'bottom':Parallaxer}" src="https://drive.google.com/uc?export=view&id=1FvGsO-IW3-WlitIPSXl5nfF_GvULSkVr" alt="" class="Planet">-->
     </div>
   </div>
-
 
   <div class="Grid_Row row">
     <div class="col">
@@ -39,7 +36,6 @@
     </div>
   </div>
 
-
   <div class="Team_Row row">
     <div class="Team_Col col">
       <div class="Team_Col_Background_Wrapper">
@@ -49,21 +45,17 @@
     </div>
   </div>
 
-
-  <div class="Contact_Row row">
+  <div class="Contact_Row row" #Contact_Row>
     <div class="Contact_Col col">
       <div class="Contact_Col_Background_Wrapper">
         <img src="https://drive.google.com/uc?export=view&id=1rsGsqfPlJTf-UzYjSRduDB8_gWDeaRlY" alt="" class="Contact_Col_Background_Image">
       </div>
-      <div class="Spaceship_Wrapper" #Spaceship>
+      <div class="Spaceship_Wrapper" #Spaceship [ngStyle]="{'top': SpaceshipY, 'left': SpaceshipX}">
           <img src="https://drive.google.com/uc?export=view&id=1Lv94eftTyfnyLgCtgSRPxkfcpSog030w" alt="" class="Spaceship_Body_Image">
           <img src="https://drive.google.com/uc?export=view&id=1HTCkgHMQFf8kZAtm3tjxioO1N-mYHzoW" alt="" class="Spaceship_Flare_Image">
-
       </div>
     </div>
-
   </div>
-
   <app-footer></app-footer>
 </div>
 	
