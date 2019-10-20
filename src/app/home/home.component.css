@@ -87,7 +87,7 @@
     .bannervideocountainer  {
       position: absolute;
       left:0;
-      top: 0px;
+      top: 0;
       background-color: black;
       height: 100vh;
       padding: 0;
