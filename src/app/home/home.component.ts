@@ -108,7 +108,7 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
     //CONTROL VARIABLES
   MouseOverActiveIndex = -1;
   DistanceFromTop = 0;
-  Parallaxer = '-1000px';
+  Parallaxer = '-400px';
   Parallaxer2 = '-650px';
   DuneParallaxer = '-300px';
   parallaxRatio = .3;
@@ -131,7 +131,7 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
       this.parallaxDunes(this.DistanceFromTop);
       this.getContactSectionScrollPosition(this.DistanceFromTop);
       this.landSpaceShip(this.ContactSectionTop);
-      this.Parallaxer = (-1000 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
+      this.Parallaxer = (-400 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
       this.Parallaxer2 = (-600 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
       cdr.detectChanges();
     });
@@ -146,9 +146,8 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   getContactSectionScrollPosition(DistanceFromTop: number)  {
-      const height = window.innerHeight|| document.documentElement.clientHeight||
+      const height = window.innerHeight || document.documentElement.clientHeight||
           document.body.clientHeight;
-
       if (this.DistanceFromTop > this.Contact_Row.nativeElement.offsetTop - height/2)  {
       let ContactFormFromTop = this.Contact_Row.nativeElement.offsetTop;
       this.ContactSectionTop = DistanceFromTop - ContactFormFromTop + height/2;
@@ -164,8 +163,9 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   scaleBannerVideo(DistanceFromTop: number)  {
     let ZoomValue = 1 - (DistanceFromTop * (9/4000));
     if (ZoomValue > 1 ) ZoomValue = 1;
-    if (ZoomValue < .4) ZoomValue = .4;
-    this.BannerVideoScaleValue = ZoomValue;
+      if (ZoomValue <= 0 ) ZoomValue = 0;
+
+      this.BannerVideoScaleValue = ZoomValue;
     return null;
   }
 
