@@ -211,7 +211,7 @@
 /* CONTACT STYLES */
 .Contact_Row  {
   padding-top: 1px;
-  height: 2000px;
+  height: 1000px;
 }
   .Contact_Col  {
 
@@ -227,7 +227,7 @@
       .Contact_Col_Background_Image {
         position: absolute;
         left:0;
-        top: -300px;
+        top: 0;
         min-width: 100%;
         height: auto;
         overflow: hidden;
@@ -264,6 +264,39 @@
         height: 100%;
         width: 100%;
     }
+    .contact_box {
+        z-index: 7;
+
+        position: absolute;
+        top: 200px;
+        left: 0;
+        height: auto;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 100;
+        font-family: 'Chromatica', 'Arial', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background: 0 0;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        vertical-align: baseline;
+        text-align: center;
+        color: white;
+    }
+        .Category_Title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 100;
+
+        }
+        .Contact_Title  {
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+        }
 
 /* Footer */
 .footer {
