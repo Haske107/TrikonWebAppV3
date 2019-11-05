@@ -119,6 +119,10 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   ContactSectionTop = 0;
   SpaceshipY = '0px';
   SpaceshipX = '0px';
+  VideoStyles = {
+    'top': '0px',
+    'position': 'fixed'
+  };
 
 
 
@@ -145,13 +149,14 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   ngAfterViewInit() {
   }
 
+    BannerVideoScrolled(event: any)   {
+    }
   getContactSectionScrollPosition(DistanceFromTop: number)  {
       const height = window.innerHeight || document.documentElement.clientHeight||
           document.body.clientHeight;
       if (this.DistanceFromTop > this.Contact_Row.nativeElement.offsetTop - height/2)  {
       let ContactFormFromTop = this.Contact_Row.nativeElement.offsetTop;
       this.ContactSectionTop = DistanceFromTop - ContactFormFromTop + height/2;
-      console.log(this.ContactSectionTop);
     }
   }
 
@@ -161,10 +166,9 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   scaleBannerVideo(DistanceFromTop: number)  {
-    let ZoomValue = 1 - (DistanceFromTop * (9/4000));
+    let ZoomValue = 1 - (DistanceFromTop * (9/6000));
     if (ZoomValue > 1 ) ZoomValue = 1;
       if (ZoomValue <= 0 ) ZoomValue = 0;
-
       this.BannerVideoScaleValue = ZoomValue;
     return null;
   }

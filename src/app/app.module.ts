@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     {path: '', component: HomeComponent},
     {path: 'about', component: AboutComponent},
   ]) ],
+
   declarations: [ AppComponent, HomeComponent, AboutComponent, FooterComponent],
   bootstrap:    [ AppComponent ]
 })
