@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
+    RotationDegree = 0;
 
   ngOnInit() {
+      setInterval(() => {
+          this.RotationDegree += 10;
+          console.log(this.RotationDegree);
+          }, 1000);
   }
 
 }

@@ -29,7 +29,7 @@
       width: 100px;
       height: 30px;
     }
-  
+
 
 
     .Section1_Background  {
@@ -103,13 +103,10 @@
         transition: all .1s;
       z-index: 5;
     }
-        .Monolith   {
-            position: absolute;
-            left: -50px;
+        app-monolith    {
+            position:absolute;
             top: 100px;
-            height: 100%;
             width: 100%;
-            z-index:4;
         }
         .bannervideosource  {
             position: absolute;

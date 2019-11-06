@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { MonolithComponent } from './monolith/monolith.component';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     {path: 'about', component: AboutComponent},
   ]) ],
 
-  declarations: [ AppComponent, HomeComponent, AboutComponent, FooterComponent],
+  declarations: [ AppComponent, HomeComponent, AboutComponent, FooterComponent, MonolithComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
