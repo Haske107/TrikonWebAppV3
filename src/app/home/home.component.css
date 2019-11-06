@@ -87,9 +87,8 @@
     .bannervideocountainer  {
       position: absolute;
       left:0;
-      top: -100px;
-      background-color: black;
-      height: calc(100vh + 200px);
+      top: 0px;
+      height: calc(100vh);
       padding: 0;
       min-height: 25rem;
       width: 100%;
@@ -102,11 +101,13 @@
         -o-transition: all .1s;
         transition: all .1s;
       z-index: 5;
+        overflow: hidden;
     }
         app-monolith    {
             position:absolute;
             top: 100px;
             width: 100%;
+            background-color: transparent;
         }
         .bannervideosource  {
             position: absolute;
@@ -161,7 +162,7 @@
 /* GRID SECTION STYLES */   
 
     .Grid_List  {
-      z-index: 1;
+      z-index: 4;
       overflow: hidden;
       padding-top: 1px;
       padding-bottom: 1px;

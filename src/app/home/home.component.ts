@@ -5,7 +5,7 @@ import { ScrollDispatcher } from '@angular/cdk/scrolling';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  styleUrls: ["./home.component.css", "./home.component.mobile.css"]
 })
 export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
 
@@ -115,6 +115,7 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   SpaceshipParallaxRatio = 1.1;
   BannerVideoScaleValue = 1;
   BannerVideoTopValue = '0px';
+  BannerRotateValue = 0;
   PlanetTopScale = 1;
   ContactSectionTop = 0;
   SpaceshipY = '0px';
@@ -135,13 +136,18 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
       this.parallaxDunes(this.DistanceFromTop);
       this.getContactSectionScrollPosition(this.DistanceFromTop);
       this.landSpaceShip(this.ContactSectionTop);
+      this.rotateBannerVideo(this.DistanceFromTop);
       this.Parallaxer = (-400 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
       this.Parallaxer2 = (-600 + (this.DistanceFromTop * this.parallaxRatio)) + 'px';
       cdr.detectChanges();
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+          alert("Mobile!");
+      }
+  }
 
   ngOnChanges()  {
   }
@@ -171,6 +177,9 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
       if (ZoomValue <= 0 ) ZoomValue = 0;
       this.BannerVideoScaleValue = ZoomValue;
     return null;
+  }
+  rotateBannerVideo(DistanceFromTop: number)    {
+        this.BannerRotateValue = DistanceFromTop/600;
   }
 
   topBannerVideo (DistanceFromTop: number)  {

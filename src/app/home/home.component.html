@@ -14,11 +14,13 @@
           <!--[ngStyle]="{'transform': 'scale(1)'}">-->
   <!--</iframe>-->
   <!--</div>-->
-    <div class="bannervideocountainer row" [ngStyle]="{'transform': 'scale(' + BannerVideoScaleValue+ ')'}" >
-        <app-monolith></app-monolith>
-    </div>
+
+
   <div class="Intro_Row row" >
     <div class="col Intro_Row_Column">
+      <div class="bannervideocountainer row"  *ngIf="DistanceFromTop < 700">
+        <app-monolith [ngStyle]="{'top': DistanceFromTop/1.2}" [BannerRotateValue]="BannerRotateValue" [BannerVideoScaleValue]="BannerVideoScaleValue"></app-monolith>
+      </div>
       <!--<img src="https://drive.google.com/uc?export=view&id=1-x1CpXM4a48v19Nr-2lg1mzAYMB5KuvQ" alt="" class="Section1_Background">-->
       <img src="https://drive.google.com/uc?export=view&id=1hRJAJqpgwr-Ihg0vGUhOLzG4KRk8xNn1" alt="" class="Home_Logo">
       <h5 class="Subtitle" >GLOBAL ARTISTS. ORGANIC CONTENT.</h5>
@@ -41,8 +43,8 @@
   <div class="Team_Row row">
     <div class="Team_Col col">
       <div class="Team_Col_Background_Wrapper">
-        <img src="https://drive.google.com/uc?export=view&id=1FoedSmR_Ny520TJclPyMS04CP49IAM9t" alt="" class="Team_Col_Background_Image">
-        <img src="https://drive.google.com/uc?export=view&id=1DLs6pEqOc2Is6R41r_VJsIp39847XRWb" alt="" class="Team_Col_Background_Image">
+        <img src="https://drive.google.com/uc?export=view&id=1GjH21Rgf_bgTbjtgFFR9bg9s0ZZRmS0g" alt="" class="Team_Col_Background_Image">
+        <img src="https://drive.google.com/uc?export=view&id=18XCvkROaqtgZ5ttPqwfYIJJiAjZcZ5UY" alt="" class="Team_Col_Background_Image">
       </div>
     </div>
   </div>
@@ -52,7 +54,7 @@
       <div class="Contact_Col_Background_Wrapper">
         <img src="https://drive.google.com/uc?export=view&id=15E0VzF0_7rHA06n1JzzaZW2DxAM_w3Y8" alt="" class="Contact_Col_Background_Image">
       </div>
-      <div class="Spaceship_Wrapper" #Spaceship [ngStyle]="{'top': SpaceshipY, 'left': SpaceshipX}">
+      <div class="Spaceship_Wrapper" #Spaceship [ngStyle]="{'top': SpaceshipY, 'left': SpaceshipX}" >
           <img src="https://drive.google.com/uc?export=view&id=1YYNpEWB8ShtIlxWEBqN12z0hBcE8swI-" alt="" class="Spaceship_Body_Image">
       </div>
       <div class="contact_box">
