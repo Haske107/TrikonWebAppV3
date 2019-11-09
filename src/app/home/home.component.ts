@@ -125,8 +125,6 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
     'position': 'fixed'
   };
 
-
-
   constructor(private scrollDispatcher: ScrollDispatcher, private cdr: ChangeDetectorRef) {    
     this.scrollDispatcher.scrolled().subscribe((x: any) => {
       this.DistanceFromTop = x.elementRef.nativeElement.scrollTop;
