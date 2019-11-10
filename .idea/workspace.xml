@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0f5cf45-1ec0-4744-b0a8-f7e6b21d7666" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/cli/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/cli/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,15 +53,18 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/jeff/Downloads/github-yoafry/src/app/home/home.component.css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -79,6 +79,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/src/assets/social_media_logos" />
       <recent name="$PROJECT_DIR$/src/assets/fonts" />
     </key>
@@ -112,7 +113,7 @@
       <workItem from="1572900020553" duration="16590000" />
       <workItem from="1573104694216" duration="3027000" />
       <workItem from="1573164192829" duration="106000" />
-      <workItem from="1573332840873" duration="277000" />
+      <workItem from="1573332840873" duration="3909000" />
     </task>
     <task id="LOCAL-00001" summary="rework 1">
       <created>1572929590333</created>
@@ -135,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573000904814</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="deployment prep">
+      <created>1573339418110</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573339418110</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,10 +163,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="rework 1" />
     <MESSAGE value="monolith" />
     <MESSAGE value="moving into mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="moving into mobile" />
+    <MESSAGE value="deployment prep" />
+    <option name="LAST_COMMIT_MESSAGE" value="deployment prep" />
   </component>
   <component name="masterDetails">
     <states>
